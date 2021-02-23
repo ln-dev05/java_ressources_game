@@ -13,4 +13,8 @@ public class Jeu {
     {
         currentWorld = m_joueur.changeWorld();
     }
+
+    public static void main(String[] args) {
+        Jeu jeu = new Jeu();
+    }
 }
