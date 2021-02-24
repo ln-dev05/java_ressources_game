@@ -1,4 +1,4 @@
 package com.jeuRessources;
 
-public class Batiment {
+public class Batiment extends Area{
 }
