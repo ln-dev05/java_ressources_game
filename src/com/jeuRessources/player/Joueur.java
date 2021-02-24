@@ -1,10 +1,10 @@
-package com.jeuRessources;
+package com.jeuRessources.player;
 
 public class Joueur {
-    private Monney bourse;
+    private Money bourse;
     public void Joueur()
     {
-        this.bourse = new Monney();
+        this.bourse = new Money();
     }
     public int changeWorld()
     {

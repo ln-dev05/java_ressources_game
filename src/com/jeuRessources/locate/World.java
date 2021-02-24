@@ -1,14 +1,16 @@
 
-package com.jeuRessources;
+package com.jeuRessources.locate;
 
 
-import javafx.scene.control.TableView;
+import com.jeuRessources.Jeu;
+import com.jeuRessources.ressources.Water;
 import javafx.scene.layout.GridPane;
 
 public class World {
     private Area[][] m_areas;
     private int m_height = 0;
     private int m_width = 0;
+
     public World()
     {
         this.m_areas = new Area[m_height][m_width];
@@ -21,16 +23,19 @@ public class World {
 
 
         for (int x = 0; x < this.m_height; x++ )
-            for (int y = 0; x < this.m_width; y++)
-                m_areas[x][y] = new Ressource(454);
+            for (int y = 0; y < this.m_width; y++)
+                m_areas[x][y] = new Water();
     }
 
     public GridPane print()
     {
+
+        int sizeX = Jeu.MAX_WIDTH / this.m_width;
+        int sizeY = Jeu.MAX_HEIGHT / this.m_height;
         GridPane tmp = new GridPane();
         for (int x = 0; x < this.m_height; x++ )
-            for (int y = 0; x < this.m_width; y++)
-                    tmp.add(m_areas[x][y].getIW(),x,y);
+            for (int y = 0; y < this.m_width; y++)
+                    tmp.add(m_areas[x][y].getIW(sizeX, sizeY),x,y);
         return tmp;
     }
 

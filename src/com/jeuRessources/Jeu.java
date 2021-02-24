@@ -1,25 +1,28 @@
 package com.jeuRessources;
 
+import com.jeuRessources.locate.World;
+import com.jeuRessources.player.Joueur;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
-import java.io.InputStream;
-
 
 public class Jeu extends Application {
     private final Joueur m_joueur = new Joueur();
     private World worlds[];
     private int currentWorld = 0;
 
+    public static int MAX_HEIGHT = 640;
+    public static int MAX_WIDTH = 640;
+
     public Jeu()
     {
         int nbWorlds = 1;
         worlds = new World[nbWorlds];
+        for (int i = 0; i < nbWorlds; i++)
+        {
+            worlds[i] = new World(20,20);
+        }
     }
     private void loadWorld()
     {
@@ -33,16 +36,8 @@ public class Jeu extends Application {
 
     @Override
     public void start(Stage stage) {
-        Class<?> aClass = this.getClass();
-
-        InputStream input = aClass.getResourceAsStream("/data/javafx/images/Shop_panel.png");
-        Image image = new Image(input, 100, 100, true, false);
-        ImageView imageView = new ImageView(image);
-
         GridPane root = worlds[currentWorld].print();
-        root.getChildren().addAll(imageView);
-
-        stage.setScene(new Scene(root, 640, 480));
+        stage.setScene(new Scene(root, MAX_WIDTH, MAX_HEIGHT));
         stage.show();
     }
 
@@ -50,9 +45,6 @@ public class Jeu extends Application {
         launch(args);
         Jeu jeu = new Jeu();
         jeu.loadWorld();
-        if (true)
-        {
-            jeu.changeWolrd();
-        }
+        jeu.changeWolrd();
     }
 }

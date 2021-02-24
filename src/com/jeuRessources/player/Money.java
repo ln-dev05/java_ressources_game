@@ -1,8 +1,8 @@
-package com.jeuRessources;
+package com.jeuRessources.player;
 
-public class Monney {
+public class Money {
     private int value = 0;
-    public Monney() {}
+    public Money() {}
 
     /**
      * @return The value of the current money
