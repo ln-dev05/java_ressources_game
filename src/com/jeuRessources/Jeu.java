@@ -7,9 +7,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Jeu extends Application {
     private final Joueur m_joueur = new Joueur();
-    private World worlds[];
+    private final World[] worlds;
     private int currentWorld = 0;
 
     public static int MAX_HEIGHT = 640;
@@ -24,14 +28,25 @@ public class Jeu extends Application {
             worlds[i] = new World(20,20);
         }
     }
-    private void loadWorld()
+    private void loadWorld(String path)
     {
+        File file = new File(path);
+        Scanner myReader;
+        try {
+            myReader = new Scanner(file);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
     public void changeWolrd()
     {
         currentWorld = m_joueur.changeWorld();
-        loadWorld();
     }
 
     @Override
@@ -43,8 +58,6 @@ public class Jeu extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        Jeu jeu = new Jeu();
-        jeu.loadWorld();
-        jeu.changeWolrd();
+        new Jeu();
     }
 }

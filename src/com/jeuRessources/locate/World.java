@@ -7,7 +7,7 @@ import com.jeuRessources.ressources.Water;
 import javafx.scene.layout.GridPane;
 
 public class World {
-    private Area[][] m_areas;
+    private final Area[][] m_areas;
     private int m_height = 0;
     private int m_width = 0;
 

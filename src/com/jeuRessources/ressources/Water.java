@@ -1,9 +1,12 @@
 package com.jeuRessources.ressources;
 
-import com.jeuRessources.locate.Ressource;
+import com.jeuRessources.locate.Resource;
 
-public class Water extends Ressource {
+public class Water extends Resource {
     public Water() {
-        super(Ressources.WATER);
+        super(Resources.WATER);
+    }
+    public Water(int nbForSec) {
+        super(Resources.WATER, nbForSec);
     }
 }
