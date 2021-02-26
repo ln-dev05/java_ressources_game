@@ -3,6 +3,7 @@ package com.jeuRessources.locate;
 
 
 import com.jeuRessources.Jeu;
+import com.jeuRessources.ressources.Trees;
 import com.jeuRessources.ressources.Water;
 import javafx.scene.layout.GridPane;
 
@@ -25,6 +26,7 @@ public class World {
         for (int x = 0; x < this.m_height; x++ )
             for (int y = 0; y < this.m_width; y++)
                 m_areas[x][y] = new Water();
+        setArea(0, 0, new Trees());
     }
 
     public GridPane print()

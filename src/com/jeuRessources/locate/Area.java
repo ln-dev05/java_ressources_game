@@ -16,10 +16,14 @@ public class Area {
 
     public ImageView getIW(int sizeX, int sizeY)
     {
-        ImageMap myIM = new ImageMap();
         Class<?> aClass = this.getClass();
-        InputStream input = aClass.getResourceAsStream(myIM.getPath(m_id));
+        InputStream input = aClass.getResourceAsStream(ImageMap.getPath(m_id));
         Image image = new Image(input, sizeX, sizeY, false, false);
         return new ImageView(image);
+    }
+
+    protected void register(int index, String value)
+    {
+        ImageMap.addEntry(index, value);
     }
 }

@@ -1,27 +1,35 @@
 package com.jeuRessources.player;
 
 public class Joueur {
-    private final Money bourse;
+    private final Money coinPurse;
     public Joueur()
     {
-        this.bourse = new Money();
+        this.coinPurse = new Money();
     }
+
+    @SuppressWarnings("unused")
     public void pay(int price)
     {
-        bourse.pay(price);
+        coinPurse.pay(price);
     }
+
+    @SuppressWarnings("unused")
     public boolean canPay(int price)
     {
-        return bourse.canPay(price);
+        return coinPurse.canPay(price);
     }
-    public int getSolde()
+
+    @SuppressWarnings("unused")
+    public int getMoney()
     {
-        return bourse.getSolde();
+        return coinPurse.getMoney();
     }
+    @SuppressWarnings("unused")
     public void gain(int gain)
     {
-        bourse.gain(gain);
+        coinPurse.gain(gain);
     }
+    @SuppressWarnings("unused")
     public int changeWorld()
     {
         return 0;

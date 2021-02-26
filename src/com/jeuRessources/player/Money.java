@@ -7,7 +7,7 @@ public class Money {
     /**
      * @return The value of the current money
      */
-    public int getSolde()
+    public int getMoney()
     {
         return this.value;
     }

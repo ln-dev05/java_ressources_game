@@ -14,6 +14,8 @@ public class Resource extends Area{
         this.m_id = id;
         this.nbForSecond = nbForSecond;
     }
+
+    @SuppressWarnings("unused")
     public int getResourceForASec(){
         return nbForSecond;
     }
