@@ -1,6 +1,6 @@
 package com.jeuRessources.player;
 
-public class Money {
+public final class Money {
     private int value = 0;
     public Money() {}
 

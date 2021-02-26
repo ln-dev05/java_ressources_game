@@ -1,6 +1,6 @@
 package com.jeuRessources.player;
 
-public class Joueur {
+public final class Joueur {
     private final Money coinPurse;
     public Joueur()
     {

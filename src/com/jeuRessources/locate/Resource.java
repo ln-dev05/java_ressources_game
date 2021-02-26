@@ -2,7 +2,7 @@ package com.jeuRessources.locate;
 
 
 
-public class Resource extends Area{
+public abstract class Resource extends Area{
     private int nbForSecond = 0;
 
     public Resource(int id)

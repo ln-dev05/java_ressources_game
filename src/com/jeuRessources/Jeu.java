@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Jeu extends Application {
+public final class Jeu extends Application {
     private final Joueur m_joueur = new Joueur();
     private final World[] worlds;
     private int currentWorld = 0;
@@ -22,7 +22,6 @@ public class Jeu extends Application {
 
     public static double MouseX = 0;
     public static double MouseY = 0;
-
 
     public Jeu()
     {

@@ -1,6 +1,6 @@
 package com.jeuRessources.utils;
 
-public class ClickManager {
+public final class ClickManager {
 
     public static void manageEvent(double mouseX, double mouseY)
     {

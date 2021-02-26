@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.InputStream;
 
-public class Area {
+public abstract class Area {
     protected int m_id = 0;
 
     public Area()
