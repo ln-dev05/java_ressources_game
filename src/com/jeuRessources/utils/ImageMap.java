@@ -4,7 +4,7 @@ import com.jeuRessources.ressources.Resources;
 import java.util.HashMap;
 
 /**
- * @author Lemair Paul <lord.nightmare05@gmail.com>
+ * @author ln-dev05 (lord.nightmare05@gmail.com)
  * @since 1.0.0
  * @version 1.0.0
  */
@@ -13,6 +13,7 @@ public final class ImageMap {
 
     /**
      * Adding default values
+     * @since 1.0.0
      */
     public ImageMap()
     {

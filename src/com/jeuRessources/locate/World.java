@@ -41,8 +41,21 @@ public class World {
         return tmp;
     }
 
+    public int getHeight()
+    {
+        return this.m_height;
+    }
+    public int getWidth()
+    {
+        return this.m_width;
+    }
+
     public void setArea(int x, int y, Area newArea)
     {
         m_areas[x][y] = newArea;
+    }
+    public Area getArea(int x, int y)
+    {
+        return m_areas[x][y];
     }
 }

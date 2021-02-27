@@ -26,4 +26,7 @@ public abstract class Area {
     {
         ImageMap.addEntry(index, value);
     }
+    public int getId(){
+        return m_id;
+    }
 }

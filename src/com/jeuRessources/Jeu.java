@@ -17,11 +17,11 @@ public final class Jeu extends Application {
     private final World[] worlds;
     private int currentWorld = 0;
 
-    public static int MAX_HEIGHT = 640;
-    public static int MAX_WIDTH = 640;
+    public final static int MAX_HEIGHT = 640;
+    public final static int MAX_WIDTH = 640;
 
-    public static double MouseX = 0;
-    public static double MouseY = 0;
+    public double MouseX = 0;
+    public double MouseY = 0;
 
     public Jeu()
     {
@@ -63,9 +63,10 @@ public final class Jeu extends Application {
         root.setOnMouseClicked(event -> {
             MouseX = event.getSceneX();
             MouseY = event.getSceneY();
-            ClickManager.manageEvent(MouseX, MouseY);
+            ClickManager.manageEvent(MouseX, MouseY, worlds[currentWorld], m_joueur);
         });
         stage.setScene(new Scene(root, MAX_WIDTH, MAX_HEIGHT));
+        stage.setTitle("Idle : Resource Game");
         stage.show();
     }
 

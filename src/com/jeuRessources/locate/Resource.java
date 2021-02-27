@@ -3,7 +3,8 @@ package com.jeuRessources.locate;
 
 
 public abstract class Resource extends Area{
-    private int nbForSecond = 0;
+    private int nbForSecond = 2;
+    protected boolean isClickable;
 
     public Resource(int id)
     {
@@ -19,4 +20,5 @@ public abstract class Resource extends Area{
     public int getResourceForASec(){
         return nbForSecond;
     }
+    public boolean getIsClickable(){return isClickable;}
 }

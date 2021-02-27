@@ -1,7 +1,20 @@
 package com.jeuRessources.player;
 
+
+/**
+ * @author ln-dev05 (lord.nightmare05@gmail.com)
+ * @version 1.0.0
+ */
 public final class Money {
+
+    /**
+     * The current value of the money
+     */
     private int value = 0;
+
+    /**
+     * Constructor
+     */
     public Money() {}
 
     /**
