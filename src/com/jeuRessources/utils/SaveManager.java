@@ -11,14 +11,17 @@ public final class SaveManager {
     }
     public static void saveWorld(World world)
     {
-
+        WorldFile file = new WorldFile(world);
+        file.save();
     }
-    public static void readGame(Jeu jeu)
+    public static Jeu readGame(String path)
     {
-
+        // a changer
+        return new Jeu();
     }
-    public static void readWorld(World world)
+    public static World readWorld(String path)
     {
-
+        WorldFile file = new WorldFile(path);
+        return file.toWorld();
     }
 }

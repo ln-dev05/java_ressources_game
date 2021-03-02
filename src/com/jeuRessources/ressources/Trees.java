@@ -8,6 +8,7 @@ public class Trees extends Resource {
     public Trees() {
         super(Resources.WOOD);
         register(Resources.WOOD, "/data/javafx/images/Trees.png");
+
         this.isClickable = true;
     }
 

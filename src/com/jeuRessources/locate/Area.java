@@ -5,8 +5,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.InputStream;
+import java.io.Serializable;
 
-public abstract class Area {
+public abstract class Area implements Serializable {
     protected int m_id = 0;
 
     public Area()

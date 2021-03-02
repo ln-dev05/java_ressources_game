@@ -7,7 +7,9 @@ import com.jeuRessources.ressources.Trees;
 import com.jeuRessources.ressources.Water;
 import javafx.scene.layout.GridPane;
 
-public class World {
+import java.io.Serializable;
+
+public class World implements Serializable {
     private final Area[][] m_areas;
     private int m_height = 0;
     private int m_width = 0;
@@ -27,6 +29,13 @@ public class World {
             for (int y = 0; y < this.m_width; y++)
                 m_areas[x][y] = new Water();
         setArea(0, 0, new Trees());
+    }
+    public World(int height, int width, int[][] tab)
+    {
+        this.m_height = height;
+        this.m_width = width;
+        this.m_areas = new Area[m_height][m_width];
+        // Somthing misses
     }
 
     public GridPane print()
@@ -48,6 +57,13 @@ public class World {
     public int getWidth()
     {
         return this.m_width;
+    }
+    public int[][] getAreas() {
+        int[][] tmp = new int[m_height][m_width];
+        for (int i = 0; i < m_width; i++)
+            for (int j = 0; j < m_height; j++)
+                tmp[j][i] = m_areas[j][i].getId();
+        return tmp;
     }
 
     public void setArea(int x, int y, Area newArea)
