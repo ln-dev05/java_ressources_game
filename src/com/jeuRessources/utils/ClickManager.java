@@ -28,8 +28,6 @@ public final class ClickManager {
     {
         int x = (int)floor(mouseX / Jeu.MAX_WIDTH * currentWorld.getWidth());
         int y = (int)floor(mouseY / Jeu.MAX_HEIGHT * currentWorld.getHeight());
-        System.out.println(mouseX);
-        System.out.println(mouseY);
         System.out.println(x);
         System.out.println(y);
         Area targetedArea = currentWorld.getArea(x, y);

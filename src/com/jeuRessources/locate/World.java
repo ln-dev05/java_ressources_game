@@ -3,6 +3,7 @@ package com.jeuRessources.locate;
 
 
 import com.jeuRessources.Jeu;
+import com.jeuRessources.ressources.Rocks;
 import com.jeuRessources.ressources.Trees;
 import com.jeuRessources.ressources.Water;
 import javafx.scene.layout.GridPane;
@@ -28,7 +29,17 @@ public class World implements Serializable {
         for (int x = 0; x < this.m_height; x++ )
             for (int y = 0; y < this.m_width; y++)
                 m_areas[x][y] = new Water();
-        setArea(0, 0, new Trees());
+        setArea(2, 3, new Trees());
+        setArea(3, 3, new Trees());
+        setArea(4, 3, new Trees());
+        setArea(1, 4, new Trees());
+        setArea(2, 4, new Trees());
+        setArea(3, 5, new Trees());
+        setArea(2, 5, new Trees());
+        setArea(4, 4, new Trees());
+        setArea(3, 4, new Rocks());
+
+
     }
     public World(int height, int width, int[][] tab)
     {
